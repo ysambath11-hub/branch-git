@@ -1,0 +1,608 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #05070a;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 50px;
+
+    background: #030507;
+    border-bottom: 1px solid #123b5d;
+}
+
+
+/* ========================================
+   LOGO + SEARCH
+======================================== */
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1689c9;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-box input {
+    width: 180px;
+    height: 38px;
+
+    padding: 0 15px;
+
+    background: #0a111c;
+    color: white;
+
+    border: 1px solid #12345c;
+    border-radius: 20px;
+
+    outline: none;
+}
+
+.search-box button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #075eff;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1689c9;
+}
+
+
+/* ========================================
+   HOME / HERO
+======================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75),
+            rgba(0, 15, 30, 0.85)),
+        url("https://i.pinimg.com/1200x/94/73/b9/9473b9149eab38793804e42a5680474b.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    text-shadow: 0 0 20px rgba(22, 137, 201, 0.5);
+}
+
+.hero p {
+    font-size: 22px;
+
+    color: #b8c7d1;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   CATEGORY BUTTONS
+======================================== */
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: #075eff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+
+    border: 1px solid #1683ff;
+}
+
+.btn:hover {
+    background: #1683ff;
+
+    box-shadow: 0 0 20px rgba(22, 131, 255, 0.5);
+
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CATEGORY SECTION
+======================================== */
+
+.category-section {
+    padding: 90px 60px;
+
+    text-align: center;
+
+    background: #05070a;
+}
+
+.category-section h2 {
+    font-size: 42px;
+
+    color: #1689c9;
+
+    margin-bottom: 50px;
+
+    text-shadow: 0 0 15px rgba(22, 137, 201, 0.3);
+}
+
+
+/* ========================================
+   GAME SECTION
+======================================== */
+
+.games {
+    background: #080b10;
+
+    border-top: 1px solid #10283a;
+}
+
+
+/* ========================================
+   CARDS GRID
+======================================== */
+
+.cards {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.card {
+    background: #0b1117;
+
+    border: 1px solid #123b5d;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: #1689c9;
+
+    box-shadow:
+        0 10px 30px rgba(22, 137, 201, 0.2);
+}
+
+
+/* ========================================
+   CARD IMAGE
+======================================== */
+
+.card img {
+    width: 100%;
+
+    height: 250px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 23px;
+
+    color: #1689c9;
+
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #aebbc4;
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   CARD BUTTON
+======================================== */
+
+.card button {
+    padding: 10px 20px;
+
+    border: 1px solid #1689c9;
+
+    border-radius: 25px;
+
+    background: #075985;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #1689c9;
+
+    box-shadow: 0 0 15px rgba(22, 137, 201, 0.4);
+
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CONTACT US
+======================================== */
+
+.contact {
+    padding: 90px 20px;
+
+    background: #05070a;
+
+    text-align: center;
+
+    border-top: 1px solid #10283a;
+}
+
+.contact h2 {
+    font-size: 42px;
+
+    color: #1689c9;
+
+    margin-bottom: 15px;
+}
+
+.contact>p {
+    color: #aebbc4;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #123b5d;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #0b1117;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #71808a;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1689c9;
+
+    box-shadow:
+        0 0 10px rgba(22, 137, 201, 0.2);
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* ========================================
+   SEND BUTTON
+======================================== */
+
+form button {
+    padding: 14px;
+
+    border: 1px solid #1689c9;
+
+    border-radius: 8px;
+
+    background: #075985;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #1689c9;
+
+    box-shadow:
+        0 0 20px rgba(22, 137, 201, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #030507;
+
+    border-top: 1px solid #123b5d;
+}
+
+footer h3 {
+    color: #1689c9;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #66757f;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-section {
+        padding: 70px 30px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .category-section {
+        padding: 60px 20px;
+    }
+
+    .category-section h2 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    .contact h2 {
+        font-size: 35px;
+    }
+}
